@@ -3,6 +3,3 @@ pandas_datareader
 pandas
 matplotlib
 numpy
-datetime
-dateutil
-datetime
