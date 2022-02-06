@@ -100,12 +100,12 @@ appraised_end=int(df['value'].tail(1))
 ratio_start='{:.2f}'.format(appraised_start/invest_start)
 ratio_end='{:.2f}'.format(appraised_end/invest_end)
 years_start=start-start
-years_end=end-start
-years_end='{:.1f}'.format(years_end.days/365)
+tyears_end=end-start
+years_end='{:.1f}'.format(tyears_end.days/365)
 # years_start=0.0
 # years_end=10.0
 int_start=0.00
-int_end=(float(ratio_end)-1)#/years_end*100
+int_end=(float(ratio_end)-1)/years_end*100
 df3 = pd.DataFrame(
     [[invest_start,appraised_start,ratio_start,years_start,int_start],[invest_end,appraised_end,ratio_end,years_end,int_end]],
     index=[start,end],
