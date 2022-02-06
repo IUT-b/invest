@@ -99,15 +99,8 @@ appraised_start=int(df['value'].head(1))
 appraised_end=int(df['value'].tail(1))
 ratio_start='{:.2f}'.format(appraised_start/invest_start)
 ratio_end='{:.2f}'.format(appraised_end/invest_end)
-
-years_start='{:.1f}'.format(0)
+years_start=0
 years_end=(end-start).days/365
-
-
-
-
-
-
 int_start=0.00
 int_end=(float(ratio_end)-1)/years_end*100
 df3 = pd.DataFrame(
