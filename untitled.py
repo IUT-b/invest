@@ -111,6 +111,7 @@ years_start=0.0
 # years_end='{:.1f}'.format(a.days/365)
 
 years_end=end-start
+years_end=years_end.days/365
 
 
 
