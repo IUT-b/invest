@@ -93,7 +93,7 @@ ax3.tick_params(labelsize=7)
 st.pyplot(fig)
 
 # まとめ
-# invest_start=int(df.loc[start,'total_purchases']+savings-purchase)
+invest_start=int(df['total_purchases'].head(1)+savings-purchase)
 # invest_end=int(df.loc[end,'total_purchases']+savings-purchase)
 # appraised_start=int(df.loc[start,'value'])
 # appraised_end=int(df.loc[end,'value'])
