@@ -94,9 +94,9 @@ st.pyplot(fig)
 
 # まとめ
 invest_start=int(df['total_purchases'].head(1)+savings-purchase)
-# invest_end=int(df.loc[end,'total_purchases']+savings-purchase)
-# appraised_start=int(df.loc[start,'value'])
-# appraised_end=int(df.loc[end,'value'])
+invest_end=int(df['total_purchases'].tail(1)+savings-purchase)
+appraised_start=int(df['value'].head(1))
+appraised_end=int(df['value'].tail(1))
 # ratio_start='{:.2f}'.format(appraised_start/invest_start)
 # ratio_end='{:.2f}'.format(appraised_end/invest_end)
 # # # time_start=start-start
