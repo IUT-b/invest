@@ -104,10 +104,10 @@ years_start=0.0
 # tyears_end=end-start
 # years_end='{:.1f}'.format(tyears_end.days/365)
 
-tstart = dt.datetime.strptime(start, '%Y-%m-%d')
-ttstart = dt.date(tstart.year, tstart.month, tstart.day)
-tend = dt.datetime.strptime(end, '%Y-%m-%d')
-ttend = dt.date(tend.year, tend.month, tend.day)
+tstart = dt.datetime.strptime(start, '%Y-%m')
+ttstart = dt.date(tstart.year, tstart.month, 1)
+tend = dt.datetime.strptime(end, '%Y-%m')
+ttend = dt.date(tend.year, tend.month, 1)
 a=ttend-ttstart
 years_end='{:.1f}'.format(a.days/365)
 
