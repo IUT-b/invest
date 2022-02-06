@@ -110,8 +110,8 @@ years_start=0.0
 # a=ttend-ttstart
 # years_end='{:.1f}'.format(a.days/365)
 
-years_end=end-start
-years_end='{:.1f}'.format(years_end.days/365)
+# years_end=end-start
+years_end=(end-start).days/365
 
 
 
