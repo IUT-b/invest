@@ -101,16 +101,16 @@ ratio_start='{:.2f}'.format(appraised_start/invest_start)
 ratio_end='{:.2f}'.format(appraised_end/invest_end)
 
 years_start=0.0
-years_end=10.0
+# years_end=10.0
 
-tstart = dt.datetime.strptime(start, '%Y-%m')
+# tstart = dt.datetime.strptime(start, '%Y-%m')
 # ttstart = dt.date(tstart.year, tstart.month, 1)
 # tend = dt.datetime.strptime(end, '%Y-%m')
 # ttend = dt.date(tend.year, tend.month, 1)
 # a=ttend-ttstart
 # years_end='{:.1f}'.format(a.days/365)
 
-
+years_end=end-start
 
 
 
