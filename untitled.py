@@ -64,7 +64,7 @@ df.iloc[0,df.columns.get_loc('purchases')]=df.iloc[0,df.columns.get_loc('purchas
 df['total_purchases']=df['purchases'].cumsum()
 df['shares']=df['purchases']/df['Close']
 df['total_shares']=df['shares'].cumsum()
-df['value']=df['Close']*df['total_shares']+savings
+df['value']=df['Close']*df['total_shares']+savings-purchase
 
 # グラフ
 fig = plt.figure()
