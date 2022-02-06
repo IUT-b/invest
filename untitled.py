@@ -109,7 +109,7 @@ df3 = pd.DataFrame(
     [[invest_start,appraised_start,ratio_start,years_start,int_start],[invest_end,appraised_end,ratio_end,years_end,int_end]],
     index=[start,end],
     columns=['investment(USD)', 'appraised(USD)','return','years','annual interest(%)'])
-
+st.table(df3)
 
 
 
