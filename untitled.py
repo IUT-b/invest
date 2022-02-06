@@ -13,13 +13,16 @@ from datetime import timedelta, datetime
 st.write('積立投資・ドルコスト平均法のシミュレーション')
 
 # 投資先選択
-invest = st.sidebar.radio('投資先',['ダウ平均株価', 'ナスダック総合指数'])
+invest = st.sidebar.radio('投資先',['ダウ平均株価', 'QQQ'])
 if invest=='ダウ平均株価':
     invest='NY Dow'
     invest2='^DJI'
-elif invest=='ナスダック総合指数':
-    invest='NASDAQ'
-    invest2='^NDQ'
+elif invest=='QQQ':
+    invest='QQQ'
+    invest2='QQQ'
+# elif invest=='ナスダック総合指数':
+#     invest='NASDAQ'
+#     invest2='^NDQ'
 
 # 条件入力
 savings = st.sidebar.number_input(label='最初の貯金額（ドル）',value=10000,step=1000)
