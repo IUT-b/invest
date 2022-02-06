@@ -15,8 +15,10 @@ st.write('積立投資・ドルコスト平均法のシミュレーション')
 # 投資先選択
 invest = st.sidebar.radio('投資先',['ダウ平均株価', 'ナスダック総合指数'])
 if invest=='ダウ平均株価':
+    invest='NY Dow'
     invest2='^DJI'
 elif invest=='ナスダック総合指数':
+    invest='NASDAQ'
     invest2='^NDQ'
 
 # 条件入力
@@ -67,22 +69,23 @@ plt.subplots_adjust(hspace=0.6)
 ax1 = fig.add_subplot(2,1,1)
 ax1.plot(date_original, df_original['Close'],label=invest,color='black')
 ax1.set_title(invest)
-ax1.set_ylabel(invest+'（ドル）', fontname="MS Gothic")
-ax1.legend(prop = {"family" : "MS Gothic"})
+ax1.set_ylabel(invest+'[$]')
+ax1.legend()
+# ax1.legend(prop = {"family" : "MS Gothic"})
 ax1.grid()
 ax1.tick_params(labelsize=7)
 ax2 = fig.add_subplot(2,1,2)
-ax2.set_title('シミュレーション', fontname="MS Gothic")
-ax2.set_xlabel('日付', fontname="MS Gothic")
-ax2.set_ylabel(invest+'（ドル）', fontname="MS Gothic")
+ax2.set_title('simulation')
+ax2.set_xlabel('date')
+ax2.set_ylabel(invest+'[$]')
 ax3 = ax2.twinx()
-ax3.set_ylabel('元金、評価額（ドル）', fontname="MS Gothic")
+ax3.set_ylabel('investment,appraised amount[$]')
 ax2.plot(date, df['Close'],label=invest,color='black')
 ax2.grid()
 ax2.tick_params(labelsize=7)
-ax3.plot(date, df['total_purchases']+savings,label='元金',color='blue')
-ax3.plot(date, df['value'],label='評価額',color='red')
-ax3.legend(prop = {"family" : "MS Gothic"})
+ax3.plot(date, df['total_purchases']+savings,label='investment amount',color='blue')
+ax3.plot(date, df['value'],label='appraised amount',color='red')
+ax3.legend()
 ax3.tick_params(labelsize=7)
 st.pyplot(fig)
 
