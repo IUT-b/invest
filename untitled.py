@@ -97,18 +97,18 @@ invest_start=int(df['total_purchases'].head(1)+savings-purchase)
 invest_end=int(df['total_purchases'].tail(1)+savings-purchase)
 appraised_start=int(df['value'].head(1))
 appraised_end=int(df['value'].tail(1))
-# ratio_start='{:.2f}'.format(appraised_start/invest_start)
-# ratio_end='{:.2f}'.format(appraised_end/invest_end)
+ratio_start='{:.2f}'.format(appraised_start/invest_start)
+ratio_end='{:.2f}'.format(appraised_end/invest_end)
 # # # time_start=start-start
 # # # time_end=end-start
-# years_start=0.0
-# years_end=10.0
-# int_start=0.00
-# int_end=(float(ratio_end)-1)/years_end*100
-# df3 = pd.DataFrame(
-#     [[invest_start,appraised_start,ratio_start,years_start,int_start],[invest_end,appraised_end,ratio_end,years_end,int_end]],
-#     index=[start,end],
-#     columns=['investment(USD)', 'appraised(USD)','return','years','annual interest(%)'])
+years_start=0.0
+years_end=10.0
+int_start=0.00
+int_end=(float(ratio_end)-1)/years_end*100
+df3 = pd.DataFrame(
+    [[invest_start,appraised_start,ratio_start,years_start,int_start],[invest_end,appraised_end,ratio_end,years_end,int_end]],
+    index=[start,end],
+    columns=['investment(USD)', 'appraised(USD)','return','years','annual interest(%)'])
 
 
 
